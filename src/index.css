@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/lato-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 500;
+  font-display: swap;
+  src: url("./assets/fonts/lato-medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 600;
+  font-display: swap;
+  src: url("./assets/fonts/lato-semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 700;
+  font-display: swap;
+  src: url("./assets/fonts/lato-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sora";
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/sora-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sora";
+  font-weight: 500;
+  font-display: swap;
+  src: url("./assets/fonts/sora-medium.woff2") format("woff2");
+}
+
+@theme {
+  --breakpoint-2xl: 80rem;
+  --breakpoint-xl: 79.9375rem;
+
+  --font-sans: "Lato", sans-serif;
+  --font-stats: "Sora", sans-serif;
+
+  --color-navy: #051036;
+  --color-brand: #ffc108;
+  --color-brand-hover: #f2b500;
+  --color-brand-ink: #7a5a00;
+  --color-field: #eeeeee;
+
+  --animate-fade-up: fade-up 0.8s ease-out both;
+  --animate-hero-zoom: hero-zoom 10s ease-out backwards;
+  --animate-dropdown: dropdown 0.2s ease-out;
+  --animate-marquee: marquee 7s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  --animate-grow-in: grow-in 0.35s ease-out both;
+  --animate-shrink-in: shrink-in 0.35s ease-out both;
+  --animate-shrink-out: shrink-out 0.25s ease-in both;
+
+  @keyframes grow-in {
+    from {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes shrink-in {
+    from {
+      opacity: 0;
+      transform: scale(1.15);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes shrink-out {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+  }
+
+  @keyframes dropdown {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes hero-zoom {
+    from {
+      transform: scale(1.1);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+}
+
+@layer components {
+  .page-container {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    .page-container {
+      width: 79.2%;
+      max-width: 1520px;
+      padding-inline: 0;
+    }
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #111827;
+  background: #f9f9f9;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
