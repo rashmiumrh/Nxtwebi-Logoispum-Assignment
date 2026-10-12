@@ -32,7 +32,7 @@ function TourCard({ title, price, image, imagePosition, framed }) {
 
       <div className="absolute inset-x-0 bottom-0 h-[45%] bg-linear-to-t from-black/75 via-black/35 to-transparent" />
 
-      <div className="absolute top-[81.6%] left-[4.64cqw] text-white 2xl:top-[448px] 2xl:left-[13px]">
+      <div className="absolute top-[81.6%] left-[4.64cqw] text-white 2xl:top-auto 2xl:bottom-[23px] 2xl:left-[13px]">
         <h3 className="text-[10.71cqw] leading-[13.57cqw] font-medium whitespace-nowrap 2xl:text-[30px] 2xl:leading-[38px]">
           {title}
         </h3>
